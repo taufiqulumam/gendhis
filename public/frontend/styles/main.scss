@@ -1,0 +1,567 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Assistant' 'sans-serif';
+    color: #071C4D;
+}   
+
+.navbar-brand img {
+    max-height: 60px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #071C4D;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #071c4d !important;
+}
+
+.btn-login {
+    border-color: #F29B08;
+    color: #071C4D;
+    border-width: 2px;
+}
+
+.btn-login:hover {
+    background-color: #DD8B00;
+    color: #071C4D;
+}
+
+header {
+    padding: 180px 0 135px;
+    min-height: 720px;
+    margin-top: -100px;
+    background-image: url("../images/header.png");
+    background-size: cover;
+}
+
+header h1 {
+    font-family: 'Poppins', serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+header p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+header .btn-book-now {
+    background-color: #F29B08;
+    color: #fff;
+    font-weight: 500;
+}
+
+header .btn-book-now:hover {
+    background-color: #DD8B00;
+    color: #fff;
+}
+
+.section-stats {
+    margin-top: -50px;
+}
+
+.section-stats .stats-detail {
+    padding-top: 15px;
+    background-color: #fff;
+    padding-left: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.section-service {
+    min-height: 440px;
+    background-color: #051334;
+    margin-top: -50px;
+    margin-bottom: 260px;
+}
+
+.section-service-heading {
+    margin-top: 100px;
+    
+
+    h2{
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    p{
+        color: #fff;
+        font-size: 18px;
+        font-weight: 200;
+    }
+}
+
+.section-service-content .icon-service {
+    margin-top: -60px;
+}
+
+.section-service-content {
+    padding-bottom: 3px;
+    margin-top: -440px;
+}
+
+.picture-group {
+    margin-top: 60px;
+}
+
+// .section-package-content .section-package-heading {
+//     margin-top: 60px;
+
+//     h2 {
+//         color: #071C4D;
+//         font-size: 30px;
+//         font-weight: bold;
+//     }
+
+//     p{
+//         color: #071C4D;
+//         font-size: 18px;
+//         font-weight: 200;
+//     }
+// }
+
+.section-package {
+    margin-top: 60px;
+    margin-bottom: 20px;
+
+    h2 {
+        font-weight: bold;
+    }
+}
+
+.section-package-content {
+
+    .card {
+        border: 2px solid;
+    }
+
+    .package-name {
+        font-weight: bold;
+        font-size: 24px;
+        font-family: 'Assistant', 'sans-serif';
+    }
+    
+    .package-price {
+        font-weight: 600;
+        color: #F29B08;
+    }
+
+    .package-detail {
+        margin-top: 20px;
+    }
+}
+
+.btn-package-details {
+    background-color: #F29B08;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.btn-package-details:hover {
+    background-color: #DD8B00;
+    color: #fff;
+}
+
+.section-testimonial .section-testimonial-heading {
+    margin-top: 60px;
+
+    h2 {
+        font-family: 'Poppins', 'serif';
+        font-weight: bold;
+        font-size: 30px;
+    }
+}
+
+.btn-bottom {
+    margin-top: 40px;
+
+    .btn-book-now {
+        background-color: #F29B08;
+        color: #fff;
+        font-weight: 500;
+    }
+    
+    .btn-book-now:hover {
+        background-color: #DD8B00;
+        color: #fff;
+    }
+    
+    .btn-need-help{
+        background-color: #c5bfbf;
+        color: #fff;
+        font-weight: 500;
+    }
+    
+    .btn-need-help:hover {
+        background-color: #071C4D;
+        color: #ffffff;
+        
+    }
+}
+
+.carousel .testimonial-details .carousel-inner .carousel-item .card {
+    border: 2px solid;
+}
+
+.carousel .testimonial-details .carousel-inner .testi {
+    margin-top: 20px;
+}
+
+.section-footer .footer-content-right {
+    font-family: 'Assistant', 'sans-serif';
+    font-weight: lighter;
+
+    h5 {
+        font-weight: 600;
+    }
+
+    .telephone {
+        float: left;
+    }
+
+    .email {
+        float: right;
+        margin-right: -40px;
+    }
+
+    .whatsapp {
+        float: left;
+        margin-right: 90px;
+    }
+
+    .instagram {
+        float: right;
+        margin-right: 50px;
+    }
+}
+
+
+// details.html
+
+.section-details-header {
+    min-height: 330px;
+    background-color: #eeeeee;
+    margin-top: -90px;
+
+}
+
+.section-details-content {
+    margin-top: -140px;
+    min-height: 100vh;
+}   
+
+.section-details-content .card-details {
+    padding: 30px;
+    border-radius: 11;
+
+    .disclaimer-header {
+        font-family: 'Assistant', 'sans-serif';
+        font-size: 16px;
+        margin-bottom: -15px;
+    }
+}
+
+.section-details-content .card-details h1 {
+    font-size: 26px;
+    font-family: 'Assistant', 'sans-serif';
+
+}
+
+.section-details-content .card-details .card-gallery {
+    margin-top: 30px;
+}
+
+.section-details-content .card-details .card-gallery .gallery {
+    padding: 20px;
+    padding-left: 100px;
+}
+
+.section-details-content h2 {
+    font-size: 20px;
+    font-family: 'Assistant', 'sans-serif';
+}
+
+.section-details-content .service-title {
+    margin-top: 30px;
+}
+
+.section-details-content p {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.section-details-content .card-details .service {
+    font-family: 'Assistant', 'sans-serif';
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+
+
+.section-details-content .card-details .package-informations {
+    margin-top: 10px;
+}
+
+.section-details-content .card-details .package-informations th {
+    font-family: 'Assistant', 'sans-serif';
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.section-details-content .card-details .package-informations td {
+    font-family: 'Assistant', 'sans-serif';
+    font-size: 18px;
+    font-weight: lighter;
+    color: #7B8190;
+}
+
+.section-details-content .card-details .book-container {
+    .btn-book-now {
+        background-color: #F29B08;
+        color: #fff;
+        font-weight: 500;
+        font-family: 'Assistant', 'sans-serif';
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .btn-book-now:hover {
+        background-color: #DD8B00;
+        color: #fff;
+    }
+        
+}
+
+//checkout.html
+
+.section-details-content .card-details {
+    padding: 30px;
+    border-radius: 11px;
+  }
+
+.section-details-content .customer {
+    font-family: 'Assistant', 'sans-serif';
+    font-size: 16px;
+    font-weight: 300;
+    color: #071C4D;
+}
+
+.section-details-content .card-details .datepicker {
+    font-family: 'Assistant', 'sans-serif';
+    color: #071C4D;
+    
+}
+
+.section-details-content .card-details .date .disclaimer-header {
+    font-family: 'Assistant', 'sans-serif';
+    font-size: 16px;
+}
+
+.section-details-content .card-details .date .form-inline {
+    .btn-submit {
+        background-color: #071c4d;
+        color: #fff;
+    }
+
+    .btn-submit:hover {
+        background-color: #0F3388;
+    }
+}
+
+.section-details-content .card-details .package-informations .text-blue {
+    color: #071C4D;
+    font-weight: bold;
+}
+
+.section-details-content .card-details .package-informations .text-orange {
+    color: #F29B08;
+    font-weight: bold;
+}
+
+.section-details-content .card-details .payment-instructions {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #7B8190;
+}
+
+.section-details-content .card-details .bank h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.section-details-content .card-details .bank .bank-item .description {
+    margin-left: 10px;
+    overflow: hidden;
+    float: left;
+}
+
+.section-details-content .card-details .bank .bank-item .description p {
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: -5px;
+}
+
+.section-details-content .card-details .bank .bank-item .bank-image {
+    width: 45px;
+    height: 45px;
+    float: left;
+}
+
+.section-details-content .book-now-container {
+    margin-top: -16px;
+}
+
+.section-details-content .btn-book-now {
+    background-color: #F29B08;
+    color: #fff;
+}
+
+.section-details-content .btn-book-now:hover {
+    background-color: #DD8B00;
+    color: #fff;
+}
+
+
+//success.html
+
+.section-success h1 {
+    font-family: 'Assistant', 'sans-serif';
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.section-success .payment-complete {
+    margin-top: 55px;
+}
+
+.section-success {
+    .btn-home {
+        background-color: #071C4D;
+        color: #fff;
+        font-family: 'Assistant', 'sans-serif';
+        font-size: 20px;
+    }
+
+    .btn-home:hover {
+        background-color: #0F3388;
+        color: #fff;
+    }
+}
+
+.section-right .card .card-body {
+
+    .btn-sign-in {
+        background-color: #F29B08;
+        color: #fff;
+        font-weight: 500;
+        font-family: 'Assistant', 'sans-serif';
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .btn-sign-in:hover {
+        background-color: #DD8B00;
+        color: #fff;
+    }
+}
+
+/* @media (min-width: 992px) {
+  
+}  */
+
+.login {
+    background: linear-gradient(90deg, #ffffff 40%, #e4e6eb 70%);
+    width: 100vw;
+    height: 100vh;
+}
+  
+.login-container {
+    padding-top: 60px;
+}
+  
+.login-container .images {
+    width: 436px;
+    height: 422px;
+    /* margin-top: 50px; */
+}
+  
+.page-login {
+    height: 90vh;
+}
+  
+.page-login .section-left h1 {
+    font-family: "Poppins";
+    font-weight: medium;
+    font-size: 35px;
+    text-align: left;
+    color: #071c4d;
+    margin-top: 20px;
+}
+  
+.page-login .section-right a {
+    font-family: Assistant;
+    font-weight: 300;
+    text-decoration: underline;
+    font-size: 16px;
+    text-align: center;
+    color: #bfbfbf;
+}
+  
+.page-login .section-right .logo-image {
+    width: 120px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.page-register .section-left h1 {
+    font-family: "Poppins";
+    font-weight: 800;
+    font-size: 50px;
+    text-align: left;
+    color: #071c4d;
+    margin-top: 20px;
+}
+
+.page-register .section-right a {
+    font-family: Assistant;
+    font-weight: 300;
+    text-decoration: underline;
+    font-size: 16px;
+    text-align: center;
+    color: #bfbfbf;
+}
+
+.page-register .section-left {
+    padding-top: 240px;
+}
+
+.page-register .section-right {
+    padding-top: 50px;
+}
+
+.register {
+    background: #e4e6eb;
+}
