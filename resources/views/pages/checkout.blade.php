@@ -46,9 +46,21 @@ endif;
                             <div class="date mt-3" id="form">
                                <h2 class="mb-3">
                                     Rencana tanggal pernikahan
-                                    {{Session::get('email') }}
                                 </h2>
-                                @if (empty(Session::has('submit')))
+                                {{-- @if (empty(Session::has('submit')))
+                                    <form action="{{ route('checkout-create', $item->id) }}" class="form-inline" method="POST" id="wedding_date">
+                                    @csrf
+                                        <label for="wedding_date" class="sr-only">YYYY/MM/DD</label>
+                                        <div class="input-date mb-2 mr-sm-2">
+                                            <input type="text" class="form-control datepicker" id="wedding_date" name="wedding_date" placeholder="YYYY/MM/DD" required>
+                                        </div>
+                                        <button type="submit" name="submit" value="book" id="book" class="btn btn-submit mb-2 px-4 ml-2">
+                                            Submit 
+                                        </button>
+                                        <br>
+                                    </form>
+                                @endif --}}
+                                @if ($date=="tampil")
                                     <form action="{{ route('checkout-create', $item->id) }}" class="form-inline" method="POST" id="wedding_date">
                                     @csrf
                                         <label for="wedding_date" class="sr-only">YYYY/MM/DD</label>

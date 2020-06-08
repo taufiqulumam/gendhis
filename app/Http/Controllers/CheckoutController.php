@@ -9,6 +9,7 @@ use Session;
 use App\Transaction;
 use App\TransactionDetail;
 use App\WeddingPackage;
+use App\WeddingDate;
 
 use Carbon\Carbon; //library format tanggal
 
@@ -16,18 +17,24 @@ class CheckoutController extends Controller
 {
     public function index(Request $request, $id)
     {
-        $email = Session::get('email');
+        $email = auth()->user()->email;
 
-        $date = TransactionDetail::where("email", $email)->first($id);
-        if(!empty($date->wedding_date)) {
-            return back()->with('message','udah diisi');
-        }
+        $date = WeddingDate::where([["email", $email], ["transactions_id", $id]])->first();
+        
 
 
         $item = Transaction::with(['details', 'wedding_package', 'user'])->findOrFail($id);
 
+        
+        if(!empty($date->wedding_date)) {
+            $date = "ilang";
+        } else {
+            $date = "tampil";
+        }
+
         return view('pages.checkout', [
-            'item' => $item
+            'item' => $item,
+            'date' => $date
         ]);
     }
 
@@ -79,6 +86,9 @@ class CheckoutController extends Controller
         $transaction->save();
 
         return redirect()->route('checkout', $id)->with('submit', false);
+
+
+        // return redirect()->route('checkout_process', $id)->with('submit', false);
     }
 
     public function success(Request $request, $id)
