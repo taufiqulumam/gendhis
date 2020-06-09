@@ -11,7 +11,6 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item {{ Request::url() == url('/admin') ? 'active' : '' }}"> 
-      {{-- {{ $active == "dashboard" ? "active" : "" }} --}}
       <a class="nav-link" href="{{ route('dashboard') }}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>

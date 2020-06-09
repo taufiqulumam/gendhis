@@ -1,8 +1,3 @@
-{{-- <?php if( !isset($_POST["submit"]) ) :
-    $error = true
-endif;
-?> --}}
-
 {{-- <script type="text/javascript" src="{{ url('frontend/libraries/jquery/jquery-3.4.1.min.js') }}"></script>
 <script>
     // $(document).ready(function() {
@@ -15,14 +10,12 @@ endif;
     // });
 
 
-    $(document).ready(function() {
-        $(".btn btn-submit").click(function() {
-            $("#wedding_date").submit(function(e) {
-                e.preventDefault();
-                $("#form").hide();
-            })
-        })
-    })
+    // $(document).ready(function() {
+    //         $("#wedding_date").submit(function(e) {
+    //             e.preventDefault();
+    //             $("#form").hide();
+    //         })
+    // })
 </script> --}}
 
 @extends('layouts.checkout')
@@ -43,31 +36,18 @@ endif;
                             <h1>Identitas Diri</h1>
                             <p class="note">Masukkan rencana tanggal pernikahan anda dan periksa kembali identitas diri anda.</p>
                     
-                            <div class="date mt-3" id="form">
+                            <div class="date mt-3">
                                <h2 class="mb-3">
                                     Rencana tanggal pernikahan
                                 </h2>
-                                {{-- @if (empty(Session::has('submit')))
+                                @if ($date=="show")
                                     <form action="{{ route('checkout-create', $item->id) }}" class="form-inline" method="POST" id="wedding_date">
                                     @csrf
                                         <label for="wedding_date" class="sr-only">YYYY/MM/DD</label>
                                         <div class="input-date mb-2 mr-sm-2">
                                             <input type="text" class="form-control datepicker" id="wedding_date" name="wedding_date" placeholder="YYYY/MM/DD" required>
                                         </div>
-                                        <button type="submit" name="submit" value="book" id="book" class="btn btn-submit mb-2 px-4 ml-2">
-                                            Submit 
-                                        </button>
-                                        <br>
-                                    </form>
-                                @endif --}}
-                                @if ($date=="tampil")
-                                    <form action="{{ route('checkout-create', $item->id) }}" class="form-inline" method="POST" id="wedding_date">
-                                    @csrf
-                                        <label for="wedding_date" class="sr-only">YYYY/MM/DD</label>
-                                        <div class="input-date mb-2 mr-sm-2">
-                                            <input type="text" class="form-control datepicker" id="wedding_date" name="wedding_date" placeholder="YYYY/MM/DD" required>
-                                        </div>
-                                        <button type="submit" name="submit" value="book" id="book" class="btn btn-submit mb-2 px-4 ml-2">
+                                        <button type="submit" name="submit" class="btn btn-submit mb-2 px-4 ml-2">
                                             Submit 
                                         </button>
                                         <br>
@@ -125,12 +105,6 @@ endif;
                                         {{ $item->wedding_package->title }}
                                     </td>
                                 </tr>
-                                {{-- <tr>
-                                    <th width="50%">Tanggal Pernikahan</th>
-                                    <td width="50%" class="text-right">
-                                        {{ $item->wedding_date }}
-                                    </td>
-                                </tr> --}}
                                 <tr>
                                     <th width="50%">Harga</th>
                                     <td width="50%" class="text-right">  
@@ -179,15 +153,18 @@ endif;
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
+                            @if ($date=="hide")
+                            <div class="book-now-container">
+                                <a href="{{ route('checkout-success', $item->id) }}" class="btn btn-book-now btn-block mt-3 py-2">
+                                    Confirm Payment 
+                                </a>
+                            </div>
+                            @endif
+                            <div class="text-center mt-3">
+                                <a href="{{ route('detail', $item->wedding_package->slug) }}" class="text-muted">Cancel Booking</a>
+                            </div>
                         </div>
-                        <div class="book-now-container">
-                            <a href="{{ route('checkout-success', $item->id) }}" class="btn btn-book-now btn-block mt-3 py-2">
-                                Confirm Payment 
-                            </a>
-                        </div>
-                        <div class="text-center mt-3">
-                            <a href="{{ route('detail', $item->wedding_package->slug) }}" class="text-muted">Cancel Booking</a>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

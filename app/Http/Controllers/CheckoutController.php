@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Session;
 
 use App\Transaction;
 use App\TransactionDetail;
@@ -21,15 +20,12 @@ class CheckoutController extends Controller
 
         $date = WeddingDate::where([["email", $email], ["transactions_id", $id]])->first();
         
-
-
         $item = Transaction::with(['details', 'wedding_package', 'user'])->findOrFail($id);
-
         
         if(!empty($date->wedding_date)) {
-            $date = "ilang";
+            $date = "hide";
         } else {
-            $date = "tampil";
+            $date = "show";
         }
 
         return view('pages.checkout', [
@@ -48,16 +44,6 @@ class CheckoutController extends Controller
             'transaction_total' => $wedding_package->price,
             'transaction_status' => 'IN_CART'
         ]);
-        
-
-        // TransactionDetail::create([
-        //     'transactions_id' => $transaction->id,
-        //     'name' => Auth::user()->name,
-        //     'email' => Auth::user()->email,
-        //     'phone_number' => Auth::user()->phone_number,
-        //     'wedding_date' => Carbon::now()
-        // ]);
-
         
         return redirect()->route('checkout', $transaction->id);
     }
@@ -85,10 +71,8 @@ class CheckoutController extends Controller
 
         $transaction->save();
 
-        return redirect()->route('checkout', $id)->with('submit', false);
-
-
-        // return redirect()->route('checkout_process', $id)->with('submit', false);
+        return redirect()->route('checkout', $id);
+        // return redirect()->route('checkout', $id)->with('submit', false);
     }
 
     public function success(Request $request, $id)
@@ -100,4 +84,5 @@ class CheckoutController extends Controller
 
         return view('pages.success');
     }
+
 }

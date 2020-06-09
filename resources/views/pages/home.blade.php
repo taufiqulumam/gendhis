@@ -133,7 +133,7 @@
                 <section class="section-package-content row justify-content-center" id="contentpackage">
                     @foreach ($packages as $package)
                     <div class="col col-sm-6 col-md-5 col-lg-3">
-                        <div class="card card-body d-flex rounded text-center">
+                        <div class="card card-body d-flex rounded text-center shadow">
                             <h5 class="package-name">{{ $package->title }}</h5>
                             <h5 class="package-price">Rp {{number_format($package->price, 0, ",",".") }}</h5>
                             <ul class="package-detail list-unstyled">

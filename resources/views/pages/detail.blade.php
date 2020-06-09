@@ -43,7 +43,7 @@
                             </table>
                             <div class="book-container">
                                 @auth
-                                    <form action="{{ route('checkout_process', $package->id) }}" method="POST">
+                                    <form action="{{ route('checkout-process', $package->id) }}" method="POST">
                                         @csrf
                                         <button class="btn btn-book-now btn-block mt-3 py-2" type="submit">
                                             Book Now
