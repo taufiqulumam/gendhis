@@ -274,7 +274,6 @@ p {
 }
 
 .copyright-reserved .copyright-text {
-  float: left;
   font-size: 16px;
   color: #b2b2b2;
 }
@@ -312,7 +311,24 @@ p {
 
 .section-details-content .card-details .card-gallery .gallery {
   padding: 20px;
-  padding-left: 100px;
+  padding-left: 20px;
+}
+
+.section-details-content .card-details .card-gallery .gallery .xzoom-container {
+  display: block;
+}
+
+.section-details-content .card-details .card-gallery .gallery .xzoom-container .xzoom {
+  width: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 10px;
+}
+
+.section-details-content .card-details .card-gallery .gallery .xzoom-container .xactive {
+  border: 4px solid #F29B08;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .section-details-content h2 {

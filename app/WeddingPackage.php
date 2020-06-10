@@ -20,6 +20,7 @@ class WeddingPackage extends Model
     //relasi wedding_package dengan gallery
     public function galleries() 
     {   
-        return $this->hasMany(Gallery::class, 'wedding_packages_id','id');      
+        // return $this->hasMany(Gallery::class, 'wedding_packages_id','id');      
+        return $this->hasMany(Gallery::class, 'wedding_packages_id');      
     }
 }

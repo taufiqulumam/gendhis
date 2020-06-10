@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+
 use App\Http\Requests\Admin\WeddingPackageRequest;
 use App\WeddingPackage;
+use App\Gallery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -106,6 +108,8 @@ class WeddingPackageController extends Controller
         $package = WeddingPackage::findOrFail($id);
 
         $package->delete();
+
+        Gallery::where('wedding_packages_id', $id)->delete();
 
         return redirect()->route('wedding-package.index')->with('status','Paket berhasil dihapus');
     }

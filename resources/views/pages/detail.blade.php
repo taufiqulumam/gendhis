@@ -14,9 +14,25 @@
                         <div class="card card-details">
                             <h1>{{ $package->title }}</h1>
                             <div class="card card-gallery">
+                                @if ($package->galleries->count())
                                 <div class="gallery">
-                                    <img src="{{ Storage::url($package->galleries->first()->image) }}" width="600px">
+                                    <div class="xzoom-container">
+                                        <img src="{{ Storage::url($package->galleries->first()->image) }}" 
+                                        class="xzoom" 
+                                        id="xzoom-default" 
+                                        xoriginal="{{ Storage::url($package->galleries->first()->image) }}">
+                                    </div>
+                                    <div class="xzoom-thumbs">
+                                        @foreach ($package->galleries as $gallery)
+                                            <a href="{{ Storage::url($gallery->image) }}">
+                                                <img src="{{ Storage::url($gallery->image) }}" 
+                                                class="xzoom-gallery" 
+                                                width="124">
+                                            </a>
+                                        @endforeach
+                                    </div>
                                 </div>
+                                @endif
                             </div>
                             <h2 class="service-title">Layanan Paket</h2>
                             <p class="service">
@@ -64,3 +80,21 @@
         </section>
     </main>
 @endsection
+
+@push('prepend-style')
+    <link rel="stylesheet" href="{{ url('frontend/libraries/xzoom/xzoom.css') }}">
+@endpush
+
+@push('addon-script')
+<script src="{{ url('frontend/libraries/xzoom/xzoom.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('.xzoom, .xzoom-gallery').xzoom({
+                zoomWidth: 500,
+                title: false,
+                tint: '#333',
+                xoffset: 15
+            });
+        });
+    </script>
+@endpush
