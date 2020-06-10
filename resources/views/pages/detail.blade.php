@@ -27,7 +27,7 @@
                                             <a href="{{ Storage::url($gallery->image) }}">
                                                 <img src="{{ Storage::url($gallery->image) }}" 
                                                 class="xzoom-gallery" 
-                                                width="124">
+                                                width="110">
                                             </a>
                                         @endforeach
                                     </div>
