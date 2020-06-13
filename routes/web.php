@@ -16,17 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index') 
     ->name('home');
 
+    
 
 Route::get('/profile/{id}', 'UserController@index')
     ->name('profile');
 
-Route::get('/profile/{user}/edit', 'UserController@edit')
+Route::get('/profile/{id}/edit', 'UserController@edit')
     ->name('profile_edit');
 
-Route::put('/profile/{user}', 'UserController@update')
+Route::put('/profile/{id}', 'UserController@update')
     ->name('profile_update');
-
-
 
 
 
@@ -40,7 +39,6 @@ Route::post('/checkout/{id}', 'CheckoutController@process')
 Route::get('/checkout/{id}', 'CheckoutController@index')
     ->name('checkout')
     ->middleware(['auth', 'verified']);
-
 
 Route::post('/checkout/create/{detail_id}', 'CheckoutController@create')
     ->name('checkout-create')

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 
-
+use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     /**
@@ -13,7 +13,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request, $id)
+    public function index(Request $id)
     {
         $user = User::findOrFail($id);
 
@@ -81,24 +81,17 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $id)
     {
-        $request->validate([
-            'nama' => 'required',
-            'email' => 'required',
-            'phone_number' => 'required'
-        ]);
-
-        $user = User::findOrFail($id);
-
-        User::where('id', $user->id)
+        User::where('id', $id->id)
             ->update([
                 'name' => $request->name,
-                'email' => $request->email,
                 'phone_number' => $request->phone_number
             ]);
 
-        return redirect('/profile')->with('status','Data berhasil diubah');
+        // return $request;
+        return redirect(url('profile', Auth::user()->id))->with('status','Data berhasil diubah');
+
     }
 
     /**

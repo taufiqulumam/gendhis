@@ -60,7 +60,7 @@
                 
                 <!-- Desktop Button -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href=/profile/1>Profil saya</a>
+                    <a class="dropdown-item" href={{ route('profile', Auth::user()->id) }}>Profil saya</a>
                     <form class="form-outline my-2 my-lg-0 d-md-block" action="{{ url('logout') }}" method="POST">
                         @csrf
                         <button class="dropdown-item">
@@ -71,7 +71,7 @@
 
                 <!--Mobile Button -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                    <button class="dropdown-item" href="/profile/1">Profil saya</button>
+                    <a class="dropdown-item" href={{ route('profile', Auth::user()->id) }}>Profil saya</a>
                     <form class="form-outline d-none d-md-block d-md-none" action="{{ url('logout') }}" method="POST">
                         @csrf
                         <button class="dropdown-item">

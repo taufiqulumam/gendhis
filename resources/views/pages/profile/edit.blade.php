@@ -14,7 +14,7 @@
                         <div class="card card-details">
                             <h1>Profil saya</h1>
                             
-                            <form method="POST" action="{{ route('profile_update', $user->id) }}">
+                            <form method="POST" action="{{ route('profile_update', Auth::user()->id) }}">
                                 @method('PUT')
                                 @csrf
                                 <div class="form-group">
@@ -26,7 +26,7 @@
                                         </div>
                                     @enderror
                                     <label for="email">Email</label>
-                                    <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Masukkan Email" name="email" value="{{ Auth::user()->email }}">
+                                    <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Masukkan Email" name="email" value="{{ Auth::user()->email }}" disabled>
                                     @error('email')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -42,7 +42,7 @@
                                 </div>
                                 <br>
                                 <button class="btn btn-package-details mt-0 col-lg-2 col-md-auto col-sm-auto" type="submit">Simpan</button>
-                                <a class="text-muted" href="/profile/1">Kembali</a>
+                                <a class="text-muted" href="{{ url('profile', Auth::user()->id) }}">Kembali</a>
                             </form>
                             
                         </div>
