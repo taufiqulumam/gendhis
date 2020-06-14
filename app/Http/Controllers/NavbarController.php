@@ -19,5 +19,12 @@ class NavbarController extends Controller
         return view('pages.detail', [
             'packages' => $packages
         ]);
+
+        // return view('pages.detail', $packages);
+
+        // $package = WeddingPackage::with(['galleries'])->where('slug', $slug)->firstOrFail();
+        // return view ('pages.detail',[
+        //     'package' => $package
+        // ]);
     }
 }

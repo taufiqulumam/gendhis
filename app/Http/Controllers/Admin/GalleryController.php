@@ -101,7 +101,7 @@ class GalleryController extends Controller
 
         $item->update($data);
 
-        return redirect()->route('gallery.index')->with('status','Galeri berhasil diubah');
+        return redirect()->route('gallery.index')->with('status','Galeri foto berhasil diubah');
     }
 
     /**
@@ -110,12 +110,13 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    // public function destroy($id)
+    public function destroy(Request $request)
     {
-        $package = Gallery::findOrFail($id);
+        $package = Gallery::findOrFail($request->id);
 
         $package->delete();
 
-        return redirect()->route('gallery.index')->with('status','Galeri berhasil dihapus');
+        return redirect()->route('gallery.index')->with('status','Galeri foto berhasil dihapus');
     }
 }

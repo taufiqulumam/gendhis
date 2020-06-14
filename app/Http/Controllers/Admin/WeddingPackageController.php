@@ -103,13 +103,17 @@ class WeddingPackageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    
+    // public function destroy($id)
+    public function destroy(Request $request)
     {
-        $package = WeddingPackage::findOrFail($id);
+        // $package = WeddingPackage::findOrFail($id);
+        $package = WeddingPackage::findOrFail($request->id);
 
         $package->delete();
 
-        Gallery::where('wedding_packages_id', $id)->delete();
+        // Gallery::where('wedding_packages_id', $id)->delete();
+        Gallery::where('wedding_packages_id', $request->id)->delete();
 
         return redirect()->route('wedding-package.index')->with('status','Paket berhasil dihapus');
     }

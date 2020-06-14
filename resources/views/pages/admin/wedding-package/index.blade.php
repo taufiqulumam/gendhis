@@ -42,20 +42,21 @@
                                 <a href="{{ route('wedding-package.edit', $package->id) }}" class="btn btn-info">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                                <form action="{{ route('wedding-package.destroy', $package->id) }}" method="POST" class="d-inline">
+                                {{-- <form action="{{ route('wedding-package.destroy', $package->id) }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('delete')
                                     <button class="btn btn-danger">
                                         <i class="fa fa-trash"></i>
                                     </button>
-                                </form>
+                                </form> --}}
 
-                                <!-- With Modal 
-                                <button type="button" class="btn btn-danger d-inline" data-toggle="modal" data-target="#ModalDelete">
+                                
+                                <button type="button" class="btn btn-danger btn-trash d-inline" data-toggle="modal" data-target="#modalDelete" data-id="{{ $package->id }}">
                                     <i class="fa fa-trash"></i>
                                 </button>
-                    
-                                <div class="modal fade" id="ModalDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                
+                                <!-- With Modal -->
+                                <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -65,26 +66,27 @@
                                             </button>
                                             </div>
                                             <div class="modal-body">
-                                                Apakah anda yakin untuk menghapus  {{ $package->title }}?
+                                                Apakah anda yakin ingin menghapusnya?
                                             </div>
                                             <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                                 <form action="{{ route('wedding-package.destroy', $package->id) }}" method="POST">
                                                     @csrf
                                                     @method('delete')
-                                                    <button class="btn btn-danger">Delete</button>
+                                                    <input type="hidden" name="id" id="input-id">
+                                                    <button class="btn btn-danger btn-delete">Delete</button>
                                                 </form>
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
 
                             </td>
                         </tr>
                         @empty
                             <tr>
                                 <td class="text-center" colspan="5">
-                                    Data Kosong
+                                    Data Tidak Tersedia
                                 </td>
                             </tr>
                         @endforelse
@@ -98,3 +100,17 @@
   <!-- /.container-fluid -->
 
 @endsection
+
+@push('addon-script')
+    <script src="{{ url('backend/vendor/jquery/jquery.min.js') }}"></script> 
+    <script type="text/javascript">
+        $(function() {
+            $('.btn-trash').click(function() {
+                id = $(this).attr('data-id');
+                $('#input-id').val(id);
+                
+                // alert( $('#input-id').val() )
+            });
+        });
+    </script>
+@endpush

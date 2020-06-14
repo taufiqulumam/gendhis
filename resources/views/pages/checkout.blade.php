@@ -1,23 +1,3 @@
-{{-- <script type="text/javascript" src="{{ url('frontend/libraries/jquery/jquery-3.4.1.min.js') }}"></script>
-<script>
-    // $(document).ready(function() {
-    //     $(".btn btn-submit").click(function() {
-    //         $("#wedding_date").submit(function(e) {
-    //         e.preventDefault();
-    //         $("#form").hide();
-    //     });
-    //     }))
-    // });
-
-
-    // $(document).ready(function() {
-    //         $("#wedding_date").submit(function(e) {
-    //             e.preventDefault();
-    //             $("#form").hide();
-    //         })
-    // })
-</script> --}}
-
 @extends('layouts.checkout')
 
 @section('title')

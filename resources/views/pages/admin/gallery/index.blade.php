@@ -42,16 +42,16 @@
                                 <a href="{{ route('gallery.edit', $package->id) }}" class="btn btn-info">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                                <form action="{{ route('gallery.destroy', $package->id) }}" method="POST" class="d-inline">
+                                {{-- <form action="{{ route('gallery.destroy', $package->id) }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('delete')
                                     <button class="btn btn-danger">
                                         <i class="fa fa-trash"></i>
                                     </button>
-                                </form>
+                                </form> --}}
 
-                                <!-- With Modal 
-                                <button type="button" class="btn btn-danger d-inline" data-toggle="modal" data-target="#ModalDelete">
+                                <!--With Modal-->
+                                <button type="button" class="btn btn-danger btn-trash d-inline" data-toggle="modal" data-target="#ModalDelete" data-id="{{ $package->id }}">
                                     <i class="fa fa-trash"></i>
                                 </button>
                     
@@ -59,25 +59,26 @@
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Hapus Paket</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Hapus Foto Paket</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                             </div>
                                             <div class="modal-body">
-                                                Apakah anda yakin untuk menghapus  {{ $package->title }}?
+                                                Apakah anda yakin ingin menghapusnya?
                                             </div>
                                             <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                                 <form action="{{ route('gallery.destroy', $package->id) }}" method="POST">
                                                     @csrf
                                                     @method('delete')
-                                                    <button class="btn btn-danger">Delete</button>
+                                                    <input type="hidden" name="id" id="input-id">
+                                                    <button class="btn btn-danger btn-delete">Delete</button>
                                                 </form>
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div> 
 
                             </td>
                         </tr>
@@ -98,3 +99,17 @@
   <!-- /.container-fluid -->
 
 @endsection
+
+@push('addon-script')
+    <script src="{{ url('backend/vendor/jquery/jquery.min.js') }}"></script> 
+    <script type="text/javascript">
+        $(function() {
+            $('.btn-trash').click(function() {
+                id = $(this).attr('data-id');
+                $('#input-id').val(id);
+                
+                // alert( $('#input-id').val() )
+            });
+        });
+    </script>
+@endpush

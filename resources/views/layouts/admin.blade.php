@@ -72,6 +72,8 @@
 
     @include('includes.admin.script')
 
+    @stack('addon-script')
+
 </body>
 
 </html>

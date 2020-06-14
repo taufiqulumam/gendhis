@@ -24,10 +24,10 @@
                     </div>
                 </li>
                 <li class="nav-item mx-md-2">
-                    <a href="#" class="nav-link">Hubungi Kami</a>
+                    <a href="#footer" class="nav-link">Hubungi Kami</a>
                 </li>
                 <li class="nav-item mx-md-2">
-                    <a href="#" class="nav-link">Testimonial</a>
+                    <a href="#testimonial" class="nav-link">Testimonial</a>
                 </li>
             </ul>
 
@@ -50,54 +50,54 @@
             @endguest
 
             @auth
-            
-            <div class="nav-item dropdown no-arrow">
-                <a class="btn btn-login btn-outline my-0 my-sm-0 px-2 nav-link dropdown-toggle" style="border-color: #F29B08;" type="submit"
-                    href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{ Auth::user()->name }}    
+                <div class="nav-item dropdown no-arrow">
+                    <a class="btn btn-login btn-outline my-0 my-sm-0 px-2 nav-link dropdown-toggle" style="border-color: #F29B08;" type="submit"
+                        href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ Auth::user()->name }}    
+                        
+                    </a>
                     
-                </a>
-                
-                <!-- Desktop Button -->
-                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href={{ route('profile', Auth::user()->id) }}>Profil saya</a>
-                    <form class="form-outline my-2 my-lg-0 d-md-block" action="{{ url('logout') }}" method="POST">
-                        @csrf
-                        <button class="dropdown-item">
-                            Logout
-                        </button>
-                    </form>
-                </div>
+                    <!-- Desktop Button -->
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href={{ route('profile', Auth::user()->id) }}>Profil saya</a>
+                        <form class="form-outline my-2 my-lg-0 d-md-block" action="{{ url('logout') }}" method="POST">
+                            @csrf
+                            <button class="dropdown-item">
+                                Logout
+                            </button>
+                        </form>
+                    </div>
 
-                <!--Mobile Button -->
-                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href={{ route('profile', Auth::user()->id) }}>Profil saya</a>
-                    <form class="form-outline d-none d-md-block d-md-none" action="{{ url('logout') }}" method="POST">
+                    <!--Mobile Button -->
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href={{ route('profile', Auth::user()->id) }}>Profil saya</a>
+                        <form class="form-outline d-none d-md-block d-md-none" action="{{ url('logout') }}" method="POST">
+                            @csrf
+                            <button class="dropdown-item">
+                                Logout
+                            </button>
+                        </form>
+                    </div>
+                
+                    
+                    <!-- Mobile Button
+                    <form class="form-outline d-sm-block d-md-none" action="{{ url('logout') }}" method="POST">
                         @csrf
-                        <button class="dropdown-item">
-                            Logout
+                        <button class="btn btn-login btn-outline my-2 my-sm-0" style="border-color: #F29B08;" type="submit">
+                            Keluar
                         </button>
                     </form>
-                
+        
+                    <!-- Desktop Button
+                    <form class="form-outline my-2 my-lg-0 d-none d-md-block" action="{{ url('logout') }}" method="POST">
+                        @csrf
+                        <button class="btn btn-login btn-outline my-2 my-sm-0 px-4" style="border-color: #F29B08;" type="submit">
+                            Keluar
+                        </button>
+                    </form> -->
                 </div>
-            
-                
-                <!-- Mobile Button
-                <form class="form-outline d-sm-block d-md-none" action="{{ url('logout') }}" method="POST">
-                    @csrf
-                    <button class="btn btn-login btn-outline my-2 my-sm-0" style="border-color: #F29B08;" type="submit">
-                        Keluar
-                    </button>
-                </form>
-    
-                <!-- Desktop Button
-                <form class="form-outline my-2 my-lg-0 d-none d-md-block" action="{{ url('logout') }}" method="POST">
-                    @csrf
-                    <button class="btn btn-login btn-outline my-2 my-sm-0 px-4" style="border-color: #F29B08;" type="submit">
-                        Keluar
-                    </button>
-                </form> -->
             @endauth
+            
         </div>
     </nav>
 </div>

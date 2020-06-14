@@ -162,7 +162,7 @@
                                 </li>
                             </ul>
                             <div class="mt-auto">
-                                <a href="{{ route('detail', $package->slug) }}" class="btn btn-package-details px-4">See Details</a>
+                                <a href="{{ route('detail', $package->slug) }}" class="btn btn-package-details px-4 hvr-shutter-out-vertical">See Details</a>
                             </div>
                         </div>
                     </div>
