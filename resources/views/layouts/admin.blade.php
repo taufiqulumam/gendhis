@@ -12,6 +12,7 @@
   <title>Gendhis Wedding - Admin</title>
 
   @include('includes.admin.style')
+  @stack('addon-style')
 
 </head>
 

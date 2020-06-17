@@ -119,10 +119,8 @@
                                               <span class="badge badge-warning">
                                           @elseif($item->transaction_status == 'SUCCESS')
                                               <span class="badge badge-success">
-                                          @elseif($item->transaction_status == 'FAILED')
-                                              <span class="badge badge-danger">
                                           @elseif($item->transaction_status == 'CANCEL')
-                                              <span class="badge badge-dark">
+                                              <span class="badge badge-danger">
                                           @elseif($item->transaction_status == 'IN_CART')
                                               <span class="badge badge-light">
                                           @else
