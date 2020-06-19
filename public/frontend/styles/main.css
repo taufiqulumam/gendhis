@@ -361,6 +361,7 @@ p {
   font-family: 'Assistant', 'sans-serif';
   font-size: 16px;
   font-weight: lighter;
+  margin-top: -10px;
 }
 
 .section-details-content .card-details .package-informations {

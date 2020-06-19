@@ -119,6 +119,7 @@
                                     </td>
                                 </tr>
                             </table>
+                            @if ($date=="hide")
                             <hr>
                             <h2>Payment Instructions</h2>
                             <p class="payment-instructions">
@@ -150,7 +151,7 @@
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
-                            @if ($date=="hide")
+                            
                             <div class="book-now-container">
                                 <a href="{{ route('checkout-success', $item->id) }}" class="btn btn-book-now btn-block mt-3 py-2">
                                     Confirm Payment 

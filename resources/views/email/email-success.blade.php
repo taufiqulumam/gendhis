@@ -144,7 +144,7 @@
                         <tbody>
                           <tr>
                             <td style="width:100px;">
-                                <img alt="Logo Gendhis" height="auto" src="{{ url('frontend/images/logo_gendhis@2x.png') }}" style="border:none;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="100" />
+                              <img alt="Logo Gendhis=" height="auto" src="{{ url('frontend/images/logo_gendhis@2x.png') }}" style="border:none;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="100" />
                             </td>
                           </tr>
                         </tbody>
@@ -194,7 +194,7 @@
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tr>
                     <td align="center" style="font-size:0px;padding:10px 25px;padding-right:25px;padding-bottom:30px;padding-left:25px;word-break:break-word;">
-                      <div style="font-family:Poppins, Times New Roman, Serif;font-size:24px;font-weight:600;line-height:1;text-align:center;color:#071C4D;">Pembayaran Transaksi Berhasil</div>
+                      <div style="font-family:Poppins, Times New Roman, Serif;font-size:24px;font-weight:600;line-height:1;text-align:center;color:#071C4D;">Transaksi Berhasil</div>
                     </td>
                   </tr>
                 </table>
@@ -330,12 +330,17 @@
                               <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
                                 <tr>
                                   <td align="center" bgcolor="#F29B08" role="presentation" style="border:none;border-radius:6px;cursor:auto;mso-padding-alt:10px 25px;background:#F29B08;" valign="middle">
-                                    <a href="{{ url('checkout/'.$data->id) }}" style="display:inline-block;background:#F29B08;color:#ffffff;font-family:Assistant, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:6px;">View Details</a>
+                                    <p style="display:inline-block;background:#F29B08;color:#ffffff;font-family:Assistant, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:6px;"> Check Details </p>
                                   </td>
                                 </tr>
                               </table>
                             </td>
                           </tr> --}}
+                          <tr>
+                            <td align="left" style="font-size:0px;padding:10px 25px;padding-right:25px;padding-left:25px;word-break:break-word;">
+                              <div style="font-family:Assistant, Helvetica, Arial, sans-serif;font-size:18px;line-height:20px;text-align:left;color:#071C4D;">Anda akan dihubungi oleh admin Gendhis Wedding dalam waktu 1x24 jam setelah anda selesai melakukan pembayaran.<br></div>
+                            </td>
+                          </tr>
                         </table>
                       </td>
                     </tr>

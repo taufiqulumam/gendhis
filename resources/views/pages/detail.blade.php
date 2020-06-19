@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Details Package
+    Details Package {{ $package->title }}
 @endsection
 
 @section('content')

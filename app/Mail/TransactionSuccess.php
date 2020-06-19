@@ -34,6 +34,6 @@ class TransactionSuccess extends Mailable
         
         ->from('no_reply@gendhis-wedding.com', 'Gendhis Wedding')
         ->subject('Wedding Package Receipts')
-        ->view('email.transaction-success');
+        ->view('email.email-success');
     }
 }

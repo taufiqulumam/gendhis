@@ -141,25 +141,12 @@
                                 <li>Kartu Undangan</li>
                                 <li>Buffe Utama Ratusan Porsi</li>
                                 <li>Gubukan Sesuai Selera</li>
-                                <li>Dekorasi</li>
+                                <li>Dekorasi Gedung</li>
+                                <li>Dekorasi Pelaminan</li>
                                 <li>Tata Rias & Busana</li>
                                 <li>Dokumentasi</li>
                                 <li>Entertainment</li>
-                                <li>
-                                    <strike>Master of Ceremony</strike>
-                                </li>
-                                <li>
-                                    <strike>Entertainment</strike>
-                                </li>
-                                <li>
-                                    <strike>Logam Mulia</strike>
-                                </li>
-                                <li>
-                                    <strike>Food Stall</strike>
-                                </li>
-                                <li>
-                                    <strike>Wedding Car</strike>
-                                </li>
+                                <li>Dan Lain-Lain</li>
                             </ul>
                             <div class="mt-auto">
                                 <a href="{{ route('detail', $package->slug) }}" class="btn btn-package-details px-4 hvr-shutter-out-vertical">See Details</a>
