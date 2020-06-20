@@ -6,7 +6,7 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Ubah Status Transaksi</h1>
+        <h1 class="h3 mb-0 text-gray-800">Ubah Status Transaksi #{{ $item->id }}</h1>
     </div>
 
     
