@@ -18,6 +18,10 @@
                         Paket Pernikahan
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a href="{{ url('detail/gendhis-paket-a') }}">Gendhis Paket A</a>
+                        <a href="{{ url('detail/gendhis-paket-b') }}">Gendhis Paket B</a>
+                        <a href="{{ url('detail/gendhis-paket-c') }}">Gendhis Paket C</a>
+                        <a href="{{ url('detail/gendhis-paket-d') }}">Gendhis Paket D</a>
                         {{-- @foreach ($packages as $package)
                             <a href="{{ route('detail', $package->slug) }}">{{ $package->title }}</a>
                         @endforeach --}}

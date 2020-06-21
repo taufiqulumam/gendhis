@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Profil saya
+    Profil Saya
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0">
                         <div class="card card-details">
-                            <h1>Profil saya</h1>
+                            <h1>Profil Saya</h1>
 
                             @if (session ('status'))
                                 <div class="alert alert-success">
@@ -23,13 +23,13 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <ul class="list-group">
-                                        <li class="list-group-item">Nama <br> 
+                                        <li class="list-group-item"><strong>Nama</strong> <br> 
                                             {{ Auth::user()->name }}
                                         </li>
-                                        <li class="list-group-item">Email <br>
+                                        <li class="list-group-item"><strong>Email</strong> <br>
                                             {{ Auth::user()->email }}
                                         </li>
-                                        <li class="list-group-item">Nomor Telepon<br>
+                                        <li class="list-group-item"><strong>Nomor Telepon</strong> <br>
                                             {{ Auth::user()->phone_number}}    
                                          </li>             
                                     </ul>
