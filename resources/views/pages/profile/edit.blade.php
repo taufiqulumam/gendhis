@@ -12,7 +12,7 @@
                 <div class="row">
                     <div class="col-lg-12 pl-lg-0">
                         <div class="card card-details">
-                            <h1>Profil Saya</h1>
+                            <h1>Ubah Profil</h1>
                             
                             <form method="POST" action="{{ route('profile_update', Auth::user()->id) }}">
                                 @method('PUT')
