@@ -68,9 +68,9 @@ class CheckoutController extends Controller
             'wedding_date' => $request->wedding_date
         ]);
 
-        $transaction = Transaction::with(['wedding_package'])->find($id);
+        // $transaction = Transaction::with(['wedding_package'])->find($id);
 
-        $transaction->transaction_total = $transaction->wedding_package->price;
+        // $transaction->transaction_total = $transaction->wedding_package->price;
 
         $transaction->save();
 

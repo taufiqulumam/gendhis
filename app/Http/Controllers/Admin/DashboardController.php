@@ -11,8 +11,6 @@ class DashboardController extends Controller
 {
     public function index(Request $request)
     {
-        // $items = Transaction::with(['details', 'wedding_package', 'user'])->orderBy('id', 'desc')->take(5)->get();
-
         return view('pages.admin.dashboard', [
             'wedding_package' => WeddingPackage::count(),
             'transaction' => Transaction::count(),
