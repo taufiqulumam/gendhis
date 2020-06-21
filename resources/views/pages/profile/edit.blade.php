@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Profil saya
+    Profil Saya
 @endsection
 
 @section('content')
