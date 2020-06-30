@@ -113,12 +113,12 @@
                     </div>
                 </section>
             </div>
-    
-            <div class="container d-flex">
-                <section class="picture-group">
+
+            <section class="picture-group">
+                <div class="container d-flex">
                     <img src="{{ url('frontend/images/picture_group.png') }}" alt="">
-                </section>
-            </div>
+                </div>
+            </section>
     
             <section class="section-package" id="package">
                 <div class="row">
@@ -168,45 +168,44 @@
                 </div>  
             </section>
     
-            <div class="container">
-                <div id="carouselcontrols" class="carousel slide" data-ride="carousel">
-                    <section class="testimonial-details" id="testidetails">
-                        <div class="carousel-inner">
-    
-                            <div class="carousel-item active">
-                                <div class="row justify-content-center">
-                                    <div class="col col-sm-6 col-md-7 col-lg-8">
-                                        <div class="card card-body d-flex rounded">
-                                            <div class="picture align-self-center">
-                                                <img src="{{ url('frontend/images/avatar-1.png') }}" alt="">
-                                            </div>
-                                            <div>
-                                                <p class="testi text-center">
-                                                    "Terima kasih atas pelayanannya, kami sangat senang. <br>Semua susunan acara berjalan dengan lancar."
-                                                </p>
-                                            </div>
+            <div class="container carousel slide" data-ride="carousel" id="carouselcontrols">
+                <section class="testimonial-details" id="testidetails">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col col-sm-6 col-md-7 col-lg-8">
+                                    <div class="card card-body d-flex rounded">
+                                        <div class="picture align-self-center">
+                                            <img src="{{ url('frontend/images/avatar-1.png') }}" alt="" style="height: 76px">
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="carousel-item">
-                                <div class="row justify-content-center">
-                                    <div class="col col-sm-6 col-md-7 col-lg-8">
-                                        <div class="card card-body d-flex">
-                                            <div class="picture align-self-center">
-                                             <img src="{{ url('frontend/images/avatar-1.png') }}" alt="">
-                                            </div>
-                                            <div>
-                                                <p class="testi text-center">
-                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ipsum dolores culpa quaerat dolore placeat, harum nostrum libero.
-                                                </p>
-                                            </div>
+                                        <div>
+                                            <p class="testi text-center">
+                                                "Terima kasih atas pelayanannya, kami sangat senang. <br>Semua susunan acara berjalan dengan lancar."
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+    
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col col-sm-6 col-md-7 col-lg-8">
+                                    <div class="card card-body d-flex">
+                                        <div class="picture align-self-center">
+                                            <img src="{{ url('frontend/images/avatar-2.png') }}" alt="" style="height: 76px">
+                                        </div>
+                                        <div>
+                                            <p class="testi text-center">
+                                                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita ipsum dolores culpa quaerat dolore placeat, harum nostrum libero."
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
                         <a class="carousel-control-prev" href="#carouselcontrols" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -217,7 +216,6 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </section>
-                </div>
             </div>
                 
     
