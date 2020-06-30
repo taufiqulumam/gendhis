@@ -29,7 +29,7 @@
                             <h1>{{ $package->title }}</h1>
                             <div class="card card-gallery">
                                 @if ($package->galleries->count())
-                                <div class="gallery">
+                                {{-- <div class="gallery">
                                     <div class="xzoom-container">
                                         <img src="{{ Storage::url($package->galleries->first()->image) }}" 
                                         class="xzoom" 
@@ -40,6 +40,24 @@
                                         @foreach ($package->galleries as $gallery)
                                             <a href="{{ Storage::url($gallery->image) }}">
                                                 <img src="{{ Storage::url($gallery->image) }}" 
+                                                class="xzoom-gallery" 
+                                                width="110">
+                                            </a>
+                                        @endforeach
+                                    </div>
+                                </div> --}}
+
+                                <div class="gallery">
+                                    <div class="xzoom-container">
+                                        <img src="{{ url('storage/'. $package->galleries->first()->image) }}" 
+                                        class="xzoom" 
+                                        id="xzoom-default" 
+                                        xoriginal="{{ url('storage/'. $package->galleries->first()->image) }}">
+                                    </div>
+                                    <div class="xzoom-thumbs">
+                                        @foreach ($package->galleries as $gallery)
+                                            <a href="{{ url('storage/'. $gallery->image) }}">
+                                                <img src="{{ url('storage/'. $gallery->image) }}" 
                                                 class="xzoom-gallery" 
                                                 width="110">
                                             </a>
