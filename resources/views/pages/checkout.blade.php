@@ -110,12 +110,18 @@
                                 </tr>
                                 <tr>
                                     <?php 
-                                    $total = number_format($item->wedding_package->price, 0, ",",".")
+                                    // $total = number_format($item->wedding_package->price, 0, ",",".")
+                                    // $total1 = $total + $rand;
+                                    // $rand = rand(100,999);
                                     ?>
                                     <th width="40%">Total (+Unique Code)</th>
                                     <td witdh="60%" class="text-right text-total">
-                                        <span class="text-blue">Rp <?php echo substr($total, 0, -3); ?></span>
-                                        <span class="text-orange">{{ mt_rand(100,999) }}</span>
+                                        {{-- <span class="text-blue">Rp <?php echo substr($transactions->transaction_total, 0, -3); ?></span> --}}
+                                        <span class="text-blue">Rp {{ number_format($transactions->transaction_total, 0, ",",".")}}</span>
+
+                                        {{-- <span class="text-orange">{{ $rand }}</span> --}}
+
+                                        {{-- <input type="text" id="total" name="total" value="{{ number_format($transactions->transaction_total, 0, ",",".")}}"> --}}
                                     </td>
                                 </tr>
                             </table>
@@ -123,7 +129,7 @@
                             <hr>
                             <h2>Payment Instructions</h2>
                             <p class="payment-instructions">
-                                Please complete your payment. You can only pay 10% of the total price
+                                Please complete your payment before you confirm payment. You can only pay 10% of the total price
                             </p>
                             <div class="bank">
                                 <div class="bank-item pb-3">

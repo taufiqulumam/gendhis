@@ -24,6 +24,8 @@ class CheckoutController extends Controller
         $date = WeddingDate::where([["email", $email], ["transactions_id", $id]])->first();
         
         $item = Transaction::with(['details', 'wedding_package', 'user'])->findOrFail($id);
+
+        $total['transactions'] = Transaction::where(['id' => $id])->first();
         
         if(!empty($date->wedding_date)) {
             $date = "hide";
@@ -31,20 +33,24 @@ class CheckoutController extends Controller
             $date = "show";
         }
 
-        return view('pages.checkout', [
+        return view('pages.checkout',[
             'item' => $item,
-            'date' => $date
-        ]);
+            'date' => $date,
+        ],$total);
     }
 
     public function process(Request $request, $id)
     {
         $wedding_package = WeddingPackage::findOrFail($id);
 
+        $rand = mt_rand(100,999);
+        $total = $wedding_package->price + $rand;
+
         $transaction = Transaction::create([
             'wedding_packages_id' => $id,
             'users_id' => Auth::user()->id,
-            'transaction_total' => $wedding_package->price,
+            // 'transaction_total' => $wedding_package->price,
+            'transaction_total' => $total,
             'transaction_status' => 'IN_CART'
         ]);
         
@@ -57,7 +63,6 @@ class CheckoutController extends Controller
         // $data['transactions_id'] = $id;
 
         // TransactionDetail::create($data);
-
         $transaction = Transaction::find($id);
 
         TransactionDetail::create([

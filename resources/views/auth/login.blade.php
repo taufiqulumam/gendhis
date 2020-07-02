@@ -88,14 +88,14 @@
 <body class="login">
     <div class="container login-container">
         <div class="row page-login d-flex justify-content-center">
-            <div class="section-left col-6 md-4">
+            <div class="section-left col-6 d-none d-lg-block">
                 <h1 class="mb-4">Make your special moments
                     <br>
                     more memorable
                 </h1>
-                <img src="{{ url('frontend/images/login-images.png') }}" alt="Login Images" class="images d-none d-sm-flex">
+                <img src="{{ url('frontend/images/login-images.png') }}" alt="Login Images" class="images d-none d-sm-flex img-fluid">
             </div>
-            <div class="section-right col-4 md-4 mt-4">
+            <div class="section-right col-lg-4 col-md-8 col-sm mt-5">
                 <div class="card">
                     <div class="card-body">
                         <div class="text-center">
@@ -143,12 +143,12 @@
                                         @enderror
                                 </div>
                             </div>
-                            <div class="form-group form-check">
+                            {{-- <div class="form-group form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck">
                                 <label for="exampleCheck" class="form-check-label">
                                     Remember Me
                                 </label>
-                            </div>
+                            </div> --}}
                             <button type="submit" class="btn btn-sign-in btn-block">
                                 Sign In
                             </button>

@@ -105,12 +105,12 @@
 <body class="register">
     <div class="container register-container">
         <div class="row page-register d-flex justify-content-center">
-            <div class="section-left col-6 md-4">
+            <div class="section-left col-6 d-none d-lg-block">
                 <h1 class="mb-4">
                     Join and Plan Your <br> Wedding <br> with Us
                 </h1>
             </div>
-            <div class="section-right col-4 md-4 mt-4">
+            <div class="section-right col-lg-4 col-md-8 col-sm my-5">
                 <div class="card">
                     <div class="card-body">
                         <div class="text-center">

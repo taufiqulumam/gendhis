@@ -7,7 +7,7 @@
 
 @section('content')
         <!-- Header-->
-        <header class="text-center">
+        <header class="text-center img-fluid">
             <h1>
                 Jadikan Momen Spesial Anda <br> Lebih Berkesan Bersama Kami
             </h1>
@@ -72,7 +72,7 @@
     
             <div class="container">
                 <section class="section-service-content row justify-content-center" id="contentservice">
-                    <div class="col col-sm-12 col-md-4 col-lg-3">
+                    <div class="col col-sm-12 col-md-4 col-lg-3 py-4">
                         <div class="card d-flex">
                             <div class="card-body">
                                 <div class="icon-service media d-flex">
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col-sm-12 col-md-4 col-lg-3">
+                    <div class="col col-sm-12 col-md-4 col-lg-3 py-4">
                         <div class="card d-flex">
                             <div class="card-body">
                                 <div class="icon-service media d-flex">
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col-sm-12 col-md-4 col-lg-3">
+                    <div class="col col-sm-12 col-md-4 col-lg-3 py-4">
                         <div class="card d-flex">
                             <div class="card-body">
                                 <div class="icon-service media d-flex">
@@ -116,15 +116,17 @@
 
             <section class="picture-group">
                 <div class="container d-flex">
-                    <img src="{{ url('frontend/images/picture_group.png') }}" alt="">
+                    <img src="{{ url('frontend/images/picture_group.png') }}" class="img-fluid" alt="">
                 </div>
             </section>
     
             <section class="section-package" id="package">
-                <div class="row">
-                    <div class="col text-center section-package-heading">
-                        <h2>Our Packages</h2>
-                        <p>Various packages that <br>you can choose</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center section-package-heading">
+                            <h2>Our Packages</h2>
+                            <p>Various packages that <br>you can choose</p>
+                        </div>
                     </div>
                 </div>
             </section>  
@@ -132,7 +134,7 @@
             <div class="container">
                 <section class="section-package-content row justify-content-center" id="contentpackage">
                     @foreach ($packages as $package)
-                    <div class="col col-sm-6 col-md-5 col-lg-3">
+                    <div class="col col-sm-6 col-md-5 col-lg-3 py-4">
                         <div class="card card-body d-flex rounded text-center shadow">
                             <h5 class="package-name">{{ $package->title }}</h5>
                             <h5 class="package-price">Rp {{number_format($package->price, 0, ",",".") }}</h5>
@@ -219,14 +221,16 @@
             </div>
                 
     
-            <div class="row btn-bottom">
-                <div class="col-12 text-center">
-                    <a href="#" class="btn btn-need-help px-4 mt-4 mx-1">
-                        I Need Help
-                    </a>
-                    <a href="{{ route('register') }}" class="btn btn-book-now px-4 mt-4 mx-1">
-                        Register
-                    </a>
+            <div class="container">
+                <div class="row btn-bottom">
+                    <div class="col-12 text-center">
+                        <a href="#" class="btn btn-need-help px-4 mt-4 mx-1">
+                            I Need Help
+                        </a>
+                        <a href="{{ route('register') }}" class="btn btn-book-now px-4 mt-4 mx-1">
+                            Register
+                        </a>
+                    </div>
                 </div>
             </div>
         </main>
