@@ -7,7 +7,7 @@
 
 @section('content')
         <!-- Header-->
-        <header class="text-center img-fluid">
+        <header class="text-center">
             <h1>
                 Jadikan Momen Spesial Anda <br> Lebih Berkesan Bersama Kami
             </h1>
