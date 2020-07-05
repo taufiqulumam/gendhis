@@ -453,7 +453,7 @@
                       <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
                         <tr>
                           <td style="width:50px;">
-                            <img src="images/icon_support@2x.png" width="50px">
+                            <img src="{{ url('frontend/images/icon_support@2x.png') }}" width="50px">
                           </td>
                           <td style="font-size:13px; padding-left:10px; color:#071C4D; 
                         font-family:Assistant, Helvetica, Arial, sans-serif;"> gendhiswedding17@gmail.com <br> 0812 2483 2798 </td>
