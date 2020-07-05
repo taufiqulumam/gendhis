@@ -32,7 +32,7 @@ class TransactionSuccess extends Mailable
     {
         return $this
         
-        ->from('no_reply@gendhis-wedding.com', 'Gendhis Wedding')
+        ->from('no_reply@gendhis-wedding.patunganbersama.com', 'Gendhis Wedding')
         ->subject('Wedding Package Receipts')
         ->view('email.email-success');
     }

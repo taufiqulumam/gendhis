@@ -144,7 +144,7 @@
                         <tbody>
                           <tr>
                             <td style="width:100px;">
-                              <img alt="Logo Gendhis=" height="auto" src="{{ url('frontend/images/logo_gendhis@2x.png') }}" style="border:none;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="100" />
+                              <img alt="Logo Gendhis" height="auto" src="{{ url('frontend/images/logo_gendhis@2x.png') }}" style="border:none;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="100" />
                             </td>
                           </tr>
                         </tbody>
