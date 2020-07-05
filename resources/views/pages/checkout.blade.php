@@ -125,8 +125,11 @@
                                     </td>
                                 </tr>
                             </table>
+                            <p class="payment-instructions">
+                                Total harga yang harus dibayar adalah 10% dari harga paket pernikahan.
+                            </p>
                             @if ($date=="hide")
-                            <hr>
+                            {{-- <hr>
                             <h2>Payment Instructions</h2>
                             <p class="payment-instructions">
                                 Please complete your payment before you confirm payment. You can only pay 10% of the total price
@@ -156,11 +159,11 @@
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
-                            </div>
+                            </div> --}}
                             
                             <div class="book-now-container">
                                 <a href="{{ route('checkout-success', $item->id) }}" class="btn btn-book-now btn-block mt-3 py-2">
-                                    Confirm Payment 
+                                    Confirm Booking
                                 </a>
                             </div>
                             @endif

@@ -11,7 +11,7 @@
                 <img src="/frontend/images/ic_complete.png" alt="Payment Complete" class="payment-complete">
                 <h1>Yeay! Success</h1>
                 <p>
-                    we've sent you email for transaction details <br>
+                    we've sent you email for transaction details and payment instruction<br>
                     please read it as well
                 </p>
                 <a href="{{ route('home') }}" class="btn btn-home mt-3 px-5">

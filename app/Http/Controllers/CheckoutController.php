@@ -44,7 +44,7 @@ class CheckoutController extends Controller
         $wedding_package = WeddingPackage::findOrFail($id);
 
         $rand = mt_rand(100,999);
-        $total = $wedding_package->price + $rand;
+        $total = ($wedding_package->price / 10 ) + $rand;
 
         $transaction = Transaction::create([
             'wedding_packages_id' => $id,

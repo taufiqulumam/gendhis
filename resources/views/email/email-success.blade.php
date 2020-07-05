@@ -245,8 +245,8 @@
                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                         <tbody>
                           <tr>
-                            <td style="width:550px;">
-                              <img alt="Gambar Paket" height="auto" src="{{ url('storage/'.$data->wedding_package->galleries[0]->image) }}" style="border:none;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="550" />
+                            <td style="width:450px;">
+                              <img alt="Gambar Paket" height="auto" src="{{ url('storage/'.$data->wedding_package->galleries[0]->image) }}" style="border:none;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="450" />
                             </td>
                           </tr>
                         </tbody>
@@ -300,7 +300,20 @@
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
                           <tr>
                             <td align="left" style="font-size:0px;padding:10px 25px;padding-right:25px;padding-left:25px;word-break:break-word;">
-                              <div style="font-family:Assistant, Helvetica, Arial, sans-serif;font-size:18px;line-height:20px;text-align:left;color:#071C4D;">Hi, {{$data->user->name}} <br> <br> Pembayaran reservasi paket pernikahan anda telah berhasil.<br> Berikut adalah rincian pemesanan paket pernikahan anda. <br> Transaksi ID <strong>#{{ $data->id }}</strong></div>
+                              <div style="font-family:Assistant, Helvetica, Arial, sans-serif;font-size:18px;line-height:20px;text-align:left;color:#071C4D;">Hi, {{$data->user->name}} <br> Reservasi paket pernikahan anda telah berhasil.<br><br>
+                                <strong>Total Pembayaran</strong><br> Rp {{ number_format($data->transaction_total, 0, ",",".")}} <br></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" style="font-size:0px;padding:10px 25px;padding-right:25px;padding-left:25px;word-break:break-word;">
+                              <div style="font-family:Assistant, Helvetica, Arial, sans-serif;font-size:15px;line-height:20px;text-align:left;color:#071C4D;">Harap melakukan pembayaran ke salah satu rekening dibawah ini:<br>
+                                <strong>Bank BNI:</strong><br> 761571132500 a/n Gendhis Wedding<br><br>
+                                <strong>Bank Mandiri</strong><br> 0012590132883392 a/n Gendhis Wedding<br><br></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" style="font-size:0px;padding:10px 25px;padding-right:25px;padding-left:25px;word-break:break-word;">
+                              <div style="font-family:Assistant, Helvetica, Arial, sans-serif;font-size:18px;line-height:20px;text-align:left;color:#071C4D;">Berikut adalah rincian pemesanan paket pernikahan anda. <br> Transaksi ID <strong>#{{ $data->id }}</strong></div>
                             </td>
                           </tr>
                           <tr>
@@ -325,20 +338,21 @@
                               </table>
                             </td>
                           </tr>
-                          {{-- <tr>
+                          <tr>
+                            <td align="left" style="font-size:0px;padding:10px 25px;padding-right:25px;padding-left:25px;word-break:break-word;">
+                              <div style="font-family:Assistant, Helvetica, Arial, sans-serif;font-size:18px;line-height:20px;text-align:left;color:#071C4D;">Jika anda sudah melakukan pembayaran, tekan tombol konfirmasi pembayaran dibawah ini untuk mengkonfirmasi pembayaran anda.<br></div>
+                            </td>
+                          </tr>
+                          <tr>
                             <td align="center" vertical-align="middle" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                               <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
                                 <tr>
                                   <td align="center" bgcolor="#F29B08" role="presentation" style="border:none;border-radius:6px;cursor:auto;mso-padding-alt:10px 25px;background:#F29B08;" valign="middle">
-                                    <p style="display:inline-block;background:#F29B08;color:#ffffff;font-family:Assistant, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:6px;"> Check Details </p>
+                                    <a href="{{ url('https://api.whatsapp.com/send?phone=6285921279924&text=Halo%2C+saya+sudah+melakukan+pembayaran+paket+pernikahan.+Berikut+saya+lampirkan+foto+bukti+pembayaran%3A') }}" target="_blank" 
+                                    style="display:inline-block;background:#F29B08;color:#ffffff;font-family:Assistant, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:6px;"> Konfirmasi Pembayaran </a>
                                   </td>
                                 </tr>
                               </table>
-                            </td>
-                          </tr> --}}
-                          <tr>
-                            <td align="left" style="font-size:0px;padding:10px 25px;padding-right:25px;padding-left:25px;word-break:break-word;">
-                              <div style="font-family:Assistant, Helvetica, Arial, sans-serif;font-size:18px;line-height:20px;text-align:left;color:#071C4D;">Anda akan dihubungi oleh admin Gendhis Wedding dalam waktu 1x24 jam setelah anda selesai melakukan pembayaran.<br></div>
                             </td>
                           </tr>
                         </table>
@@ -439,7 +453,7 @@
                       <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
                         <tr>
                           <td style="width:50px;">
-                            <img src="{{ url('frontend/images/icon_support@2x.png') }}" width="50px">
+                            <img src="images/icon_support@2x.png" width="50px">
                           </td>
                           <td style="font-size:13px; padding-left:10px; color:#071C4D; 
                         font-family:Assistant, Helvetica, Arial, sans-serif;"> gendhiswedding17@gmail.com <br> 0812 2483 2798 </td>
