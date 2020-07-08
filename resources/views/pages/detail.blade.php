@@ -10,7 +10,7 @@
         <section class="section-details-content">
             <div class="container">
                 <div class="row">
-                    <div class="col p-0"  data-aos="zoom-out">
+                    <div class="col p-0" data-aos="zoom-out">
                         <nav>
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
@@ -89,7 +89,7 @@
                                     <td width="50%" class="text-right">{{ $package->location }}</td>
                                 </tr>
                             </table>
-                            <div class="book-container">
+                            <div class="book-container" data-aos="fade-up" data-aos-delay="200">
                                 @auth
                                     <form action="{{ route('checkout-process', $package->id) }}" method="POST">
                                         @csrf
