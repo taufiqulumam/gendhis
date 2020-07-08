@@ -1,6 +1,6 @@
 <!-- Navbar -->
 <div class="container">
-    <nav class="row navbar navbar-expand-lg navbar-light bg-none">
+    <nav class="row navbar navbar-expand-lg navbar-light bg-none" data-aos="fade-down">
         <a href="{{ route('home') }}" class="navbar-brand">
             <img src="{{ url('frontend/images/logo_gendhis.png') }}" alt="Logo Gendhis Wedding">
         </a>

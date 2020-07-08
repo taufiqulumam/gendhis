@@ -10,7 +10,7 @@
         <section class="section-details-content">
             <div class="container">
                 <div class="row">
-                    <div class="col p-0">
+                    <div class="col p-0"  data-aos="zoom-out">
                         <nav>
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 pl-lg-0">
+                    <div class="col-lg-8 pl-lg-0" data-aos="fade-right">
                         <div class="card card-details">
                             <h1>{{ $package->title }}</h1>
                             <div class="card card-gallery">
@@ -76,7 +76,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" data-aos="fade-left">
                         <div class="card card-details card-right">
                             <h2>Package Informations</h2>
                             <table class="package-informations">

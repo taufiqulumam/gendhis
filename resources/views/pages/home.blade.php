@@ -14,7 +14,7 @@
             <p class="mt-3">
                 We believe every couple must have <br> a special moment in their life
             </p>
-            <a href="#package" class="btn btn-book-now px-4 mt-4">
+            <a href="#package" class="btn btn-book-now px-4 mt-4" data-aos="zoom-in">
                 Book Now
             </a>
         </header>
@@ -62,7 +62,7 @@
             <section class="section-service" id="service">
                 <div class="container">
                     <div class="row">
-                        <div class="col text-center section-service-heading">
+                        <div class="col text-center section-service-heading" data-aos="fade-up">
                             <h2>Our Provide Service</h2>
                             <p>Always providing the best <br> service for customers</p>
                         </div>
@@ -72,7 +72,7 @@
     
             <div class="container">
                 <section class="section-service-content row justify-content-center" id="contentservice">
-                    <div class="col col-sm-12 col-md-4 col-lg-3 py-4">
+                    <div class="col col-sm-12 col-md-4 col-lg-3 py-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="card d-flex">
                             <div class="card-body">
                                 <div class="icon-service media d-flex">
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col-sm-12 col-md-4 col-lg-3 py-4">
+                    <div class="col col-sm-12 col-md-4 col-lg-3 py-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="card d-flex">
                             <div class="card-body">
                                 <div class="icon-service media d-flex">
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col-sm-12 col-md-4 col-lg-3 py-4">
+                    <div class="col col-sm-12 col-md-4 col-lg-3 py-4" data-aos="fade-up" data-aos-delay="300">
                         <div class="card d-flex">
                             <div class="card-body">
                                 <div class="icon-service media d-flex">

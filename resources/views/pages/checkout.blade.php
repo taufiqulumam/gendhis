@@ -11,7 +11,7 @@
         <section class="section-details-content">
             <div class="container">
                 <div class="row">
-                    <div class="col pl-0">
+                    <div class="col pl-0" data-aos="zoom-out">
                         <nav>
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 pl-lg-0">
+                    <div class="col-lg-8 pl-lg-0" data-aos="fade-right">
                         <div class="card card-details">
                             <h1>Identitas Diri</h1>
                             <p class="note">Masukkan rencana tanggal pernikahan anda dan periksa kembali identitas diri anda.</p>
@@ -92,7 +92,7 @@
                             
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" data-aos="fade-left">
                         <div class="card card-details card-right">
                             <h2>Checkout Informations</h2>
                             <table class="package-informations">
@@ -161,7 +161,7 @@
                                 </div>
                             </div> --}}
                             
-                            <div class="book-now-container">
+                            <div class="book-now-container" data-aos="fade-up" data-aos-delay="200">
                                 <a href="{{ route('checkout-success', $item->id) }}" class="btn btn-book-now btn-block mt-3 py-2">
                                     Confirm Booking
                                 </a>
