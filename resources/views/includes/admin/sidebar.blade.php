@@ -22,7 +22,7 @@
     <li class="nav-item {{ Request::url() == url('/admin/wedding-package') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('wedding-package.index') }}">
           <i class="fas fa-fw fa-gift"></i>
-          <span>Paket Wedding</span></a>
+          <span>Paket Pernikahan</span></a>
       </li>
 
     <!-- Divider -->
